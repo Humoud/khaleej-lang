@@ -14,6 +14,7 @@ lexer = Lexeme.define do
   token :AR_STRING   => /^"[\u0600-\u06ff]|[\u0750-\u077f]|[\ufb50-\ufc3f]|[\ufe70-\ufefc]*"$/
 end
 
+# process the following file
 tokens = lexer.analyze do
   from_file 'test-codes/arabic_code.src'
 end
